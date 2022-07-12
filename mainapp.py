@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 df2 = pd.read_csv('data_cleaned_1.csv')
 df2 = df2[['product','rating','sale_price','market_price','soup']]
-# df2 = df2[:5000]
+df2 = df2[:10000]
 
 @st.cache(ttl=48*3600)
 def get_recommendations_2(title,df2):
